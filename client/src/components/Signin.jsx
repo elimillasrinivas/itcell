@@ -90,7 +90,7 @@ const Signin = () => {
                 <button type="submit" className="btn btn-primary btn-block mt-3">
                   Log In
                 </button>  
-                <Link className="btn mt-3" to="/admin/login" style={{backgroundColor:"#39478C",color:"white"}}>
+                <Link className="btn m-3" to="/admin/login" style={{backgroundColor:"#39478C",color:"white"}}>
                 Admin Log In
                 </Link>
                 <p className="mt-3 text-center">
