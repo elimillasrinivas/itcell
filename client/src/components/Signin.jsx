@@ -93,14 +93,14 @@ const Signin = () => {
                 <Link className="btn ml-3" to="/admin/login" style={{backgroundColor:"#39478C",color:"white"}}>
                 Admin Log In
                 </Link>
-                <p className="text-center">
+                <p className="mt-3 text-center">
                   Instructions
                 </p>
-                <p className="mt-3 primary text-center">
-                  *Login for data entry
+                <p className="text-center" style={{color:"#007BFF"}}>
+                  *For data entry Log In
                 </p>
                 <p className="text-center" style={{color:"#39478C"}}>
-                   *Admin log in for download data
+                   *For download data Admin Log In
                 </p>
                 <p className="mt-3 text-center">
                   Don't have an account? <Link to="/signup">Signup</Link>
