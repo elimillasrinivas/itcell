@@ -34,7 +34,7 @@ const Admin = () => {
             closeOnClick: true,
             pauseOnHover: false,
           });
-          navigate("/");
+          navigate("/eaform");
         } else {
           console.error("Error:", error);
         }
