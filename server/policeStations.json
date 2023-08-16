@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "name": "Ibrahimpatnam PS",
+      "districtId": 1,
+      "mandalId": 1,
+      "assembly":1
+    },
+    {
+      "id": 2,
+      "name": "Adibatla PS",
+      "districtId": 1,
+      "mandalId": 1,
+      "assembly":1
+    },
+    {
+      "id": 3,
+      "name": "Pharma City PS",
+      "districtId": 1,
+      "mandalId": 1,
+      "assembly":1
+    },
+    {
+      "id": 4,
+      "name": "Hayathnagar PS",
+      "districtId": 1,
+      "mandalId": 1,
+      "assembly":1
+    },
+    {
+      "id": 5,
+      "name": "Abdullapur PS",
+      "districtId": 1,
+      "mandalId": 1,
+      "assembly":1
+    },
+    {
+      "id": 6,
+      "name": "Yacharam PS",
+      "districtId": 1,
+      "mandalId": 1,
+      "assembly":1
+    },
+    {
+      "id": 7,
+      "name": "Vansthalipuram PS",
+      "districtId": 1,
+      "mandalId": 1,
+      "assembly":1
+    }
+  ]
+  
