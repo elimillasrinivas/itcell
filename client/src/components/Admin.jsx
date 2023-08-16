@@ -34,7 +34,7 @@ const Admin = () => {
             closeOnClick: true,
             pauseOnHover: false,
           });
-          navigate("/signin");
+          navigate("/");
         } else {
           console.error("Error:", error);
         }
