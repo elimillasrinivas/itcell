@@ -94,6 +94,10 @@ const Signin = () => {
                 Admin Log In
                 </Link>
                 <p className="mt-3 text-center">
+                  Login for data entry <br/>
+                  Admin log in for download data
+                </p>
+                <p className="mt-3 text-center">
                   Don't have an account? <Link to="/signup">Signup</Link>
                 </p>
               </form>
