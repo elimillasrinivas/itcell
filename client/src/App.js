@@ -12,19 +12,12 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-<<<<<<< HEAD
         <Route path="/" element={<Signin />} />
-=======
->>>>>>> f8ae960130d8763336d220065275ab251172f4f6
         <Route path="/eaform" element={<ElectionForm />} />
 
         <Route path="/admin" element={<Admin />} />
         <Route path="/admin/login" element={<AdminSigin/>} />
 
-<<<<<<< HEAD
-=======
-        <Route path="/" element={<Signin />} />
->>>>>>> f8ae960130d8763336d220065275ab251172f4f6
 
         <Route path="/signup" element={<Signup />} />
       </Routes>

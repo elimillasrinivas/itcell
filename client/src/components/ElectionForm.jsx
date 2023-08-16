@@ -74,14 +74,14 @@ const ElectionForm = () => {
   };
 
   const fetchDistricts = async () => {
-    const response = await axios.get("https://itcell.onrender.com/api/districts");
+    const response = await axios.get("http://localhost:8083/api/districts");
     // console.log(response.data);
     setDistricts(response.data);
   };
 
   const fetchMandals = async (assemblyId) => {
     const response = await axios.get(
-      `https://itcell.onrender.com/api/mandals/${assemblyId}`
+      `http://localhost:8083/api/mandals/${assemblyId}`
     );
     // console.log(response.data);
     setMandals(response.data);
@@ -89,7 +89,7 @@ const ElectionForm = () => {
 
   const fetchAssemblies = async (districtId) => {
     const response = await axios.get(
-      `https://itcell.onrender.com/api/assemblies/${districtId}`
+      `http://localhost:8083/api/assemblies/${districtId}`
     );
     console.log(response.data);
     setAssemblies(response.data);
@@ -97,7 +97,7 @@ const ElectionForm = () => {
 
   const fetchPoliceStations = async (districtId, assemblyId) => {
     const response = await axios.get(
-      `https://itcell.onrender.com/api/police-stations/${districtId}/${assemblyId}`
+      `http://localhost:8083/api/police-stations/${districtId}/${assemblyId}`
     );
     // console.log(response.data);
     setPoliceStations(response.data);
@@ -161,7 +161,7 @@ const ElectionForm = () => {
     };
     console.log(updatedFormData);
     await axios
-      .post("https://itcell.onrender.com/data/entry", updatedFormData)
+      .post("http://localhost:8083/data/entry", updatedFormData)
       .then((res) => {toast.success(res.data.message,{
         position:"top-center",
         autoClose:2000,

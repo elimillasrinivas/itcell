@@ -28,7 +28,7 @@ const Signup = () => {
       password:formData.password
     }
 
-    await axios.post("https://itcell.onrender.com/user/register",data)
+    await axios.post("http://localhost:8083/user/register",data)
     .then((res)=>{
       if(res.data.message==="User registered successfully") navigate("/")
       else navigate("/signup")
@@ -96,7 +96,7 @@ const Signup = () => {
                   Sign Up
                 </button>
                 <p className="mt-3 text-center">
-                  Already have an account? <Link to="/">Signin</Link>
+                  Already have an account? <Link to="/signin">Signin</Link>
                 </p>
               </form>
             </div>
