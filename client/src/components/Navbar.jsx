@@ -16,7 +16,11 @@ const Navbar = () => {
           />
         </Link>
         <div className="ml-auto">
+<<<<<<< HEAD
           <Link className="btn" to="/admin/login" style={{backgroundColor:"#39478C",color:"white"}}>
+=======
+          <Link className="btn" to="/" style={{backgroundColor:"#39478C",color:"white"}}>
+>>>>>>> f8ae960130d8763336d220065275ab251172f4f6
             Admin Log In
           </Link>
         </div>

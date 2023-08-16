@@ -10,7 +10,7 @@ const Admin = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8083/admin/dashboard", {
+      .get("https://itcell.onrender.com/admin/dashboard", {
         headers: {
           Authorization: sessionStorage.getItem("token"),
         },
@@ -43,7 +43,7 @@ const Admin = () => {
 
   const downloadExcel = async () => {
     try {
-      const response = await axios.get("http://localhost:8083/data/get");
+      const response = await axios.get("https://itcell.onrender.com/data/get");
       const data = response.data.data;
 
       if (!Array.isArray(data)) {
