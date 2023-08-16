@@ -1,16 +1,16 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from 'axios'
+import { toast} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-
-const Signup = () => {
+const AdminSigin = () => {
   const navigate=useNavigate()
   const [formData, setFormData] = useState({
-    fullName: "",
     email: "",
     password: "",
-    confirmPassword: "",
   });
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,20 +20,33 @@ const Signup = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     const data={
-      fullName:formData.fullName,
       email:formData.email,
       password:formData.password
     }
-
-    await axios.post("http://localhost:8083/user/register",data)
+    await axios.post("http://localhost:8083/user/login",data)
     .then((res)=>{
-      if(res.data.message==="User registered successfully") navigate("/")
-      else navigate("/signup")
+      console.log(res.data);
+      if(res.data.message==='Login success') {
+        sessionStorage.setItem("token", res.data.token);
+        if(res.data.user.role==='admin') navigate("/admin")
+        else navigate("/eaform")
+      }
+      
     })
-    .catch((error)=>console.log(error))
+    .catch((error)=>{ 
+      console.log(error);
+      toast.error(error.response.data.error,{
+        position:"top-center",
+        autoClose:2000,
+        hideProgressBar:"true",
+        closeOnClick: true,
+        pauseOnHover: false,
+      })      
+        navigate("/")
+    })
   };
 
   return (
@@ -41,21 +54,9 @@ const Signup = () => {
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="card">
-            <div className="card-header">Sign Up</div>
+            <div className="card-header">Admin Log In</div>
             <div className="card-body">
               <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                  <label htmlFor="firstName">Full Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="fullName"
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
                 <div className="form-group">
                   <label htmlFor="email">Email</label>
                   <input
@@ -80,23 +81,11 @@ const Signup = () => {
                     required
                   />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="confirmPassword">Confirm Password</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="confirmPassword"
-                    name="confirmPassword"
-                    value={formData.confirmPassword}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
                 <button type="submit" className="btn btn-primary btn-block mt-3">
-                  Sign Up
-                </button>
+                  Log In
+                </button>     
                 <p className="mt-3 text-center">
-                  Already have an account? <Link to="/signin">Signin</Link>
+                  Don't have an account? <Link to="/signup">Signup</Link>
                 </p>
               </form>
             </div>
@@ -107,4 +96,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default AdminSigin;

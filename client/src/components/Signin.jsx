@@ -28,10 +28,17 @@ const Signin = () => {
     }
     await axios.post("http://localhost:8083/user/login",data)
     .then((res)=>{
-      // console.log(res.data.token);
+      console.log(res.data);
       if(res.data.message==='Login success') {
         sessionStorage.setItem("token", res.data.token);
-        navigate("/admin")
+        toast.success(res.data.message,{
+          position:"top-center",
+          autoClose:2000,
+          hideProgressBar:"true",
+          closeOnClick: true,
+          pauseOnHover: false,
+        })   
+        navigate("/eaform")
       }
       
     })
@@ -44,7 +51,7 @@ const Signin = () => {
         closeOnClick: true,
         pauseOnHover: false,
       })      
-        navigate("/signin")
+        navigate("/")
     })
   };
 

@@ -16,7 +16,7 @@ const Admin = () => {
         },
       })
       .then((res) => {
-        // console.log(res.data);
+        console.log(res.data);
         toast.success(res.data.message, {
           position: "top-center",
           autoClose: 2000,
@@ -34,7 +34,7 @@ const Admin = () => {
             closeOnClick: true,
             pauseOnHover: false,
           });
-          navigate("/signin");
+          navigate("/eaform");
         } else {
           console.error("Error:", error);
         }

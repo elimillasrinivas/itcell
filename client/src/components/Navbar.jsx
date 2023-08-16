@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/eaform">
           <img
             src={tslogo}
             alt="Logo"
@@ -16,7 +16,7 @@ const Navbar = () => {
           />
         </Link>
         <div className="ml-auto">
-          <Link className="btn" to="/signin" style={{backgroundColor:"#39478C",color:"white"}}>
+          <Link className="btn" to="/admin/login" style={{backgroundColor:"#39478C",color:"white"}}>
             Admin Log In
           </Link>
         </div>
