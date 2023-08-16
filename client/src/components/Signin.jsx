@@ -44,7 +44,7 @@ const Signin = () => {
         closeOnClick: true,
         pauseOnHover: false,
       })      
-        navigate("/signin")
+        navigate("/")
     })
   };
 
