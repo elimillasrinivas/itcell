@@ -26,7 +26,7 @@ const Signin = () => {
       email:formData.email,
       password:formData.password
     }
-    await axios.post("http://localhost:8083/user/login",data)
+    await axios.post("https://itcell.onrender.com/user/login",data)
     .then((res)=>{
       console.log(res.data);
       if(res.data.message==='Login success') {
