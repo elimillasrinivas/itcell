@@ -89,7 +89,10 @@ const Signin = () => {
                 </div>
                 <button type="submit" className="btn btn-primary btn-block mt-3">
                   Log In
-                </button>     
+                </button>  
+                <Link className="btn" to="/admin/login" style={{backgroundColor:"#39478C",color:"white"}}>
+                Admin Log In
+                </Link>
                 <p className="mt-3 text-center">
                   Don't have an account? <Link to="/signup">Signup</Link>
                 </p>
